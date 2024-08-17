@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- NSAppTransportSecurity for web traffic -->
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
+
+    <!-- LSApplicationQueriesSchemes for URL schemes -->
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>whatsapp</string>
+        <string>facebook</string>
+        <string>instagram</string>
+        <string>telegram</string>
+        <string>youtube</string>
+        <string>twitter</string>
+    </array>
+
+    <!-- Custom URL schemes for WhatsApp, Telegram, YouTube, Twitter, and Facebook -->
+    <key>CFBundleURLTypes</key>
+    <array>
+        <!-- WhatsApp -->
+        <dict>
+            <key>CFBundleURLName</key>
+            <string>whatsapp</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>whatsapp</string>
+            </array>
+        </dict>
+        <!-- WhatsApp Group -->
+        <dict>
+            <key>CFBundleURLName</key>
+            <string>whatsapp-group</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>whatsapp-group</string>
+            </array>
+        </dict>
+        <!-- Telegram -->
+        <dict>
+            <key>CFBundleURLName</key>
+            <string>telegram</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>tg</string>
+            </array>
+        </dict>
+        <!-- YouTube -->
+        <dict>
+            <key>CFBundleURLName</key>
+            <string>youtube</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>youtube</string>
+            </array>
+        </dict>
+        <!-- Twitter -->
+        <dict>
+            <key>CFBundleURLName</key>
+            <string>twitter</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>twitter</string>
+            </array>
+        </dict>
+        <!-- Facebook -->
+        <dict>
+            <key>CFBundleURLName</key>
+            <string>facebook</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>fb</string>
+            </array>
+        </dict>
+    </array>
+
+    <!-- Usage descriptions for accessing the photo library -->
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>We need access to your photo library to upload photos.</string>
+
+    <!-- Usage description for accessing the documents folder -->
+    <key>NSDocumentsFolderUsageDescription</key>
+    <string>We need access to your files to read and write data.</string>
+
+</dict>
+</plist>
